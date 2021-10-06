@@ -1,7 +1,7 @@
 # FAF191_TMPS
 
 ## Author: `Cambur Dumitru`
-## Topic: `Robot Builder Factory`
+## Topic: `Toy Builder Factory`
 ## Introduction/Theory:
     So, for this laboratory work we are going to create a toy factory!
     The idea behind the project is to create a factory
