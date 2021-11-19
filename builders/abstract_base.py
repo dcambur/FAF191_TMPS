@@ -45,7 +45,6 @@ class ShipBuilder(ABC):
 
 
 class CarBuilder(ABC):
-
     @abstractmethod
     def create_wheels(self):
         pass

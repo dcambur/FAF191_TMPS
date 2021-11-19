@@ -4,6 +4,8 @@ from products.abstract_base import CommonBuilderProduct, Ship
 
 
 class WoodenToyShip(Ship, CommonBuilderProduct):
+    factory_name = "Wooden Toy Factory"
+
     def __init__(self):
         self.parts = []
 
@@ -15,13 +17,15 @@ class WoodenToyShip(Ship, CommonBuilderProduct):
         self.parts.append(part)
 
     def list_parts(self):
-        print(f"Wooden Toy Ship Parts: {', '.join(self.parts)}", end="")
+        return f"Wooden Toy Ship Parts: {', '.join(self.parts)}"
 
     def clone(self):
         return copy.copy(self)
 
 
 class MetalToyShip(Ship, CommonBuilderProduct):
+    factory_name = "Metal Toy Factory"
+
     def __init__(self):
         self.parts = []
 
@@ -33,7 +37,7 @@ class MetalToyShip(Ship, CommonBuilderProduct):
         self.parts.append(part)
 
     def list_parts(self):
-        print(f"Metal Toy Ship Parts: {', '.join(self.parts)}", end="")
+        return f"Metal Toy Ship Parts: {', '.join(self.parts)}"
 
     def clone(self):
         return copy.copy(self)

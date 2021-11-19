@@ -1,4 +1,6 @@
 class ToyCarDirector:
+    product_type = "car"
+
     def __init__(self, builder=None):
         self._builder = builder
 
@@ -21,6 +23,8 @@ class ToyCarDirector:
 
 
 class ToyRobotDirector:
+    product_type = "robot"
+
     def __init__(self, builder=None):
         self._builder = builder
 
@@ -44,6 +48,8 @@ class ToyRobotDirector:
 
 
 class ToyShipDirector:
+    product_type = "ship"
+
     def __init__(self, builder=None):
         self._builder = builder
 

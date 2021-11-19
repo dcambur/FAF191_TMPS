@@ -7,6 +7,8 @@ from builders.ship_builder import WoodenToyShipBuilder, MetalToyShipBuilder
 
 
 class WoodenToysFactory(ToysFactory):
+    name = "Wooden Toys Factory"
+
     def create_robot_director(self):
         return ToyRobotDirector(WoodenToyRobotBuilder())
 
@@ -18,6 +20,8 @@ class WoodenToysFactory(ToysFactory):
 
 
 class MetalToysFactory(ToysFactory):
+    name = "Metal Toys Factory"
+
     def create_robot_director(self):
         return ToyRobotDirector(MetalToyRobotBuilder())
 

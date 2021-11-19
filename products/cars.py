@@ -4,6 +4,8 @@ from products.abstract_base import CommonBuilderProduct, Car
 
 
 class WoodenToyCar(Car, CommonBuilderProduct):
+    factory_name = "Wooden Toy Factory"
+
     def __init__(self):
         self.parts = []
 
@@ -14,13 +16,15 @@ class WoodenToyCar(Car, CommonBuilderProduct):
         self.parts.append(part)
 
     def list_parts(self):
-        print(f"Wooden Toy Car Parts: {', '.join(self.parts)}", end="")
+        return f"Wooden Toy Car Parts: {', '.join(self.parts)}"
 
     def clone(self):
         return copy.copy(self)
 
 
 class MetalToyCar(Car, CommonBuilderProduct):
+    factory_name = "Metal Toy Factory"
+
     def __init__(self):
         self.parts = []
 
@@ -31,7 +35,7 @@ class MetalToyCar(Car, CommonBuilderProduct):
         self.parts.append(part)
 
     def list_parts(self):
-        print(f"Metal Toy Car Parts: {', '.join(self.parts)}", end="")
+        return f"Metal Toy Car Parts: {', '.join(self.parts)}"
 
     def clone(self):
         return copy.copy(self)
