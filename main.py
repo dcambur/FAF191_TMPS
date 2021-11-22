@@ -1,9 +1,8 @@
-from client_processor import ClientProcessor
-from client_proxy import ClientProxy
+from client.client_processor import ClientProcessor
+from client.client_proxy import ClientProxy
 from factories.toy_factory import WoodenToysFactory, MetalToysFactory
 
 # this is where you can test my code as a client.
-from product_logger import ProductLogger
 
 
 def client_code(sender, recipient):
@@ -22,5 +21,5 @@ def client_code(sender, recipient):
 
 if __name__ == "__main__":
     SENDER = "ToyLite@factory.com"
-    RECIPIENT = "statistics@factory.com"
+    RECIPIENT = "JohnSmith"
     client_code(SENDER, RECIPIENT)

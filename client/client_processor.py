@@ -1,6 +1,5 @@
 # This is a Facade pattern implementation designed to shorten the written code required for client
 # here we will create and log the product automatically
-from product_logger import ProductLogger
 
 
 class ClientProcessor:
