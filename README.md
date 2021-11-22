@@ -22,14 +22,14 @@
 ## Implementation
 
 Let's build a toy factory! 
-Abstract Factory is used to work with different toy factories
-Builder is used to make MVP and Full product versions by parts
-Prototype is used for mass-producing (if implementing this will ever be needed)
+Abstract Factory is used to work with different toy factories.
+Builder is used to make MVP and Full product versions by parts.
+Prototype is used for mass-producing (if implementing this will ever be needed).
 
 Facade is used to hide some initialization process 
-from the client
-Decorator is used to create the logging logic
-Proxy is needed to combine logging logic with the product creation
+from the client.
+Decorator is used to create the logging logic.
+Proxy is needed to combine logging logic with the product creation.
 
 ### Snippets
 #### Decorator
