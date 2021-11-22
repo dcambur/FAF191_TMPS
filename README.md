@@ -94,5 +94,3 @@ class ClientProcessor:
 
 #### Working Screenshot
 ![img_1.png](img_1.png)
-
-## Conclusions / Screenshots / Results
