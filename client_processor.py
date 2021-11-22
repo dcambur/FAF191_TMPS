@@ -7,22 +7,11 @@ class ClientProcessor:
     def __init__(self, sender, recipient):
         self.sender = sender
         self.recipient = recipient
-        self.logger = None
 
-    def __logger_init(self, director):
-        if not self.logger:
-            self.logger = ProductLogger(director)
-        else:
-            self.logger.switch(director)
-
-    def create_product(self, director, mvp=False):
+    @staticmethod
+    def create_product(director, mvp=False):
         if not mvp:
             product = director.create_full_product()
-
         else:
             product = director.create_minimal_product()
-
-        self.__logger_init(director)
-        print(self.logger.log(self.sender, self.recipient))
-
         return product
