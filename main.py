@@ -1,13 +1,17 @@
+from subscriber.subcription import SubscribeObserver
 from client.client_processor import ClientProcessor
 from client.client_proxy import ClientProxy
 from factories.toy_factory import WoodenToysFactory, MetalToysFactory
+
 
 # this is where you can test my code as a client.
 
 
 def client_code(sender, recipient):
     client = ClientProcessor(sender, recipient)
-    client_proxy = ClientProxy(client)
+    client_proxy = ClientProxy(client, log_required=False)
+    client_proxy.notifier.append(recipient)
+
     wooden_toys_factory = WoodenToysFactory()
     metal_toys_factory = MetalToysFactory()
 

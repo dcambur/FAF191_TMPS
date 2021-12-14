@@ -31,6 +31,12 @@ from the client.
 Decorator is used to create the logging logic.
 Proxy is needed to combine logging logic with the product creation.
 
+Observer is used to implement
+notifications(via subscription model) for every product recipient 
+(logger and notifications are different, 
+as first are for the server side, last are for the clients ).
+It is used in the client_proxy as the notifier object
+
 ### Snippets
 #### Decorator
 ```
@@ -92,5 +98,31 @@ class ClientProcessor:
         return product
 ```
 
+#### Observer
+```
+class SubscribeObserver:
+    def __init__(self):
+        self.subscriptions = []
+
+    def append(self, subscriber):
+        if subscriber not in self.subscriptions:
+            self.subscriptions.append(subscriber)
+        else:
+            print("Error: Subscriber Already Exists")
+
+    def delete(self, subscriber):
+        if subscriber in self.subscriptions:
+            self.subscriptions.remove(subscriber)
+        else:
+            print("Error: Incorrect Subscriber")
+
+    def notify(self):
+        for subscriber in self.subscriptions:
+            print(f"Client {subscriber} was notified on the product creation")
+
+```
+
 #### Working Screenshot
 ![img_1.png](img_1.png)
+
+![img_2.png](img_2.png)
