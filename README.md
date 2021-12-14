@@ -17,6 +17,10 @@
 * Abstract Factory
 * Prototype
 * Builder
+* Facade
+* Decorator
+* Proxy
+* Observer
 
 
 ## Implementation
