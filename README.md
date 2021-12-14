@@ -10,6 +10,7 @@
 * Get familiar with the DPs;
 * Choose a specific domain;
 * Implement at least 3 creational and structural DPs;
+* Implement at least 1 Behavioral DP.
 
 
 ## Used Design Patterns: 
